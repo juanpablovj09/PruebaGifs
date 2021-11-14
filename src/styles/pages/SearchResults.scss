@@ -1,0 +1,22 @@
+.SearchResult {
+  margin-top: 50px;
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h3 {
+      padding: 0 2rem;
+    }
+    p {
+      position: absolute;
+      right: 3rem;
+      top: 8rem;
+      font-size: 1.5rem;
+    }
+    p:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}

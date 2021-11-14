@@ -1,0 +1,9 @@
+@use '../vars' as c;
+
+.Home {
+  text-align: center;
+  h2 {
+    margin-top: 30px;
+    color: c.$turquesoide;
+  }
+}

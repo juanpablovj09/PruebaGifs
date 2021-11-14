@@ -1,0 +1,33 @@
+@use '../_vars' as c;
+
+.Gif {
+  margin-bottom: 0.5rem;
+  &-link {
+    position: relative;
+  }
+  img {
+    width: 100%;
+  }
+  &-title {
+    display: none;
+  }
+  &-link:hover {
+    .Gif-title {
+      width: 100%;
+      height: 50px;
+      background-color: rgba(#555, 0.7);
+      position: absolute;
+      bottom: 0.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: c.$turquesoide;
+        padding: 0 1.5rem;
+      }
+    }
+  }
+  
+}

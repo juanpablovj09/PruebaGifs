@@ -1,0 +1,12 @@
+@use '../_vars' as c;
+
+.GifDetail {
+  text-align: center;
+  h3 {
+    color: c.$turquesoide;
+  }
+  img {
+    margin-top: 30px;
+    width: 70%;
+  }
+}

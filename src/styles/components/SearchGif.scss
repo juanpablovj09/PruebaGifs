@@ -1,0 +1,48 @@
+@use '../vars' as c;
+
+.SearchInput {
+  margin: 30px 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h2 {
+    padding: 0 1rem 0;
+    text-align: center;
+  }
+  form {
+    width: 50%;
+    max-width: 500px;
+    margin-top: 40px; 
+    display: flex;
+    input {
+      width: 85%;
+      height: 40px;
+      border: 2px solid c.$turquesoide;
+      border-right: none;
+      border-radius: 1rem 0 0 1rem;
+      padding-left: 20px;
+      outline: none;
+      font-size: 1.6rem;
+    }
+    button {
+      width: 15%;
+      border: 2px solid c.$turquesoide;
+      border-radius: 0 1rem 1rem 0;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button:hover {
+      background-color: c.$turquesoide;
+      cursor: pointer;
+      .icon {
+        color: #fff;
+      }
+    }
+    input[type=text]:hover, input[type=text]:focus {
+      box-shadow: 0 0 5px 1px #D3D3D3;
+    }
+  }
+}

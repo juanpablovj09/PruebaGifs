@@ -1,0 +1,37 @@
+@use '../vars' as c;
+
+.Menu {
+  width: 400px;
+  height: 100vh;
+  background-color: c.$turquesoide;
+  position: fixed;
+  left: 0;
+  top: 0px;
+  border-right: 1px solid #000;
+  // animation: 0.5s ease-in slidein;
+  z-index: 2;
+  padding-top: 80px;
+
+  // @keyframes slidein {
+  //   from {
+  //     width: 0%;
+  //   }
+  //   to {
+  //     width: 300px;
+  //   }
+  // }
+  &-exit {
+    font-size: 2rem;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    padding: 15px 15px 0 0;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Menu {
+    width: 100vw;
+  }
+}
