@@ -1,0 +1,26 @@
+@use '../vars' as c;
+
+.Login {  
+  height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  color: c.$turquesoide;
+  margin: 0 2rem;
+  
+  &-form {
+    padding: 0 2rem;  
+    font-size: 1.6rem;
+    font-weight: 500;
+    input {
+      height: 30px;
+      font-size: 1.3rem;
+    }
+  }
+  &-button {
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+  }
+  &-alert {
+    text-align: center;
+  }
+}

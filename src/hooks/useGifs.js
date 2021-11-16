@@ -10,7 +10,7 @@ const useGifs = ({topic} = {topic: localStorage.getItem('lastTopic')}) => {
   const {gifs, setGifs} = useContext(Context)
   const [page, setPage] = useState(STARTED_PAGE);
 
-  const key = topic || 'wanda';
+  const key = topic || localStorage.getItem('lastTopic') ||'ibai';
 
   useEffect(() => {
     setLoading(true);

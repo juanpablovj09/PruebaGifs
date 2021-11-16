@@ -1,0 +1,23 @@
+@use '../vars' as c;
+
+.Button-favs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  &__button {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: c.$turquesoide;
+    cursor: pointer;
+    }
+  &__button:hover {
+    box-shadow: 0 0 5px 1px #D3D3D3;
+    color: #000;
+  }
+}

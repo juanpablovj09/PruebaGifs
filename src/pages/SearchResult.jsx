@@ -6,6 +6,8 @@ import { useLocation } from 'wouter';
 import useNearScreen from "../hooks/useNearScreen";
 import debounce from 'just-debounce-it'
 import SearchGif from '../components/SearchGif';
+import ButtonFavs from '../components/ButtonFavs';
+import {useAuth} from '../context/AuthContext'
 import { Helmet } from "react-helmet";
 
 const SearchResult = ({params}) => {
@@ -14,6 +16,7 @@ const SearchResult = ({params}) => {
   const [path, pushLocation] = useLocation();
   const extRef = useRef();
   const { show } = useNearScreen({once: false, extRef: loading ? null : extRef})
+  const {currentUser} = useAuth()
   
   const handleClick = () => {
     pushLocation('/')
@@ -36,8 +39,12 @@ const SearchResult = ({params}) => {
       </Helmet>
       <div className="SearchResult">
         <SearchGif topic={topic} />
+        {
+          currentUser &&
+          <ButtonFavs />
+        }
         <div className="SearchResult-nav">
-          <h3>Gifs about: {decodeURI(topic)}</h3>
+          <h2>Gifs about: {decodeURI(topic)}</h2>
           <p onClick={handleClick}>Back</p>
         </div>
         <ListGifs gifs={gifs} loading={loading}/>

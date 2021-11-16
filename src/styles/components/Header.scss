@@ -14,7 +14,29 @@
   }
   &-menu {
     position: absolute;
-    left: 0;
-    margin-left: 30px;
+    left: 3rem;
+  }
+  &-login {
+    position: absolute;
+    right: 1rem;
+    top: 1.4rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    &__logout, &__login{
+      cursor: pointer;
+    }
+    &__logout:hover, &__login:hover{
+      text-decoration: underline;
+    }
+    p {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Header-login__email  {
+    display: none;
   }
 }

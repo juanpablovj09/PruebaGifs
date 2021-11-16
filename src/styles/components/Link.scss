@@ -1,0 +1,32 @@
+@use '../_vars' as c;
+
+.Link {
+  width: 300px;
+  height: 50%;
+  position: relative;
+  background-color: c.$turquesoide;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  p {
+    font-size: 2.4rem;
+  }
+  button {
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    font-size: 1.4rem;
+  }
+  &-esc {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+}

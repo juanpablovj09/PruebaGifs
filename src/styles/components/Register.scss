@@ -1,0 +1,34 @@
+@use '../vars' as c;
+
+.Register {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  color: c.$turquesoide;
+  &-container {
+    text-align: center;
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0;
+      input {
+        width: 300px;
+        height: 30px;
+        padding-left: 1rem;
+        margin-top: 2rem;
+        border: 1px solid c.$turquesoide;;
+        border-radius: 5px;
+      }
+    }
+    button {
+      background-color: c.$turquesoide;
+      border: none;
+      width: 100px;
+      height: 30px;
+      font-weight: 700;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
+}

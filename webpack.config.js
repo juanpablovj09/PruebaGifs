@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { EnvironmentPlugin } = require('webpack');
 
 module.exports = {
     entry: './src/index.jsx',
@@ -56,6 +57,14 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
+        }),
+        new EnvironmentPlugin({
+          FIREBASE_API_KEY: 'AIzaSyCc-uTnFkRVZMKO8jRbvPi008lsEn8ID6g',
+          FIREBASE_AUTH_DOMAIN: 'pruebagifs1.firebaseapp.com',
+          FIREBASE_PROJECT_ID: 'pruebagifs1',
+          FIREBASE_STORAGE_BUCKET: 'pruebagifs1.appspot.com',
+          FIREBASE_MESSAGING_SENDER_ID: '523557135287',
+          FIREBASE_APP_ID: '1:523557135287:web:9d61464ba4db556fc0be32'
         }),
     ],
     devServer: {

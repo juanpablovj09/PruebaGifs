@@ -1,13 +1,13 @@
+@use '../vars' as c;
+
 .SearchResult {
-  margin-top: 50px;
+  h2 {
+    margin-top: 30px;
+    color: c.$turquesoide;
+    font-size: 2.6rem;
+  }
   &-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    h3 {
-      padding: 0 2rem;
-    }
     p {
       position: absolute;
       right: 3rem;
