@@ -20,7 +20,7 @@ const Home = () => {
         <meta name="description" content="Home Gif" />
       </Helmet>
       <div className="Home">
-        <SearchGif topic={lastSearch} />
+        <SearchGif />
         {
           currentUser &&
             <ButtonFavs />

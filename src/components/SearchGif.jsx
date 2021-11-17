@@ -3,8 +3,8 @@ import { useLocation } from 'wouter'
 import '@styles/components/SearchGif.scss';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-const SearchGif = ({topic}) => {
-  const [input, setInput] = useState('');
+const SearchGif = ({topic = ''}) => {
+  const [input, setInput] = useState(topic);
   const [ path, pushLocation ] = useLocation();
   
   const handleChange = e => {
