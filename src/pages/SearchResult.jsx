@@ -5,14 +5,14 @@ import '@styles/pages/SearchResults.scss'
 import { useLocation } from 'wouter';
 import useNearScreen from "../hooks/useNearScreen";
 import debounce from 'just-debounce-it'
-import SearchGif from '../components/SearchGif';
+import SearchGif from "@components/SearchGif/SearchGif";
 import ButtonFavs from '../components/ButtonFavs';
 import {useAuth} from '../context/AuthContext'
 import { Helmet } from "react-helmet";
 
 const SearchResult = ({params}) => {
-  const { topic } = params;
-  const { gifs, loading, setPage } = useGifs({topic});
+  const { topic, rating, language } = params;
+  const { gifs, loading, setPage } = useGifs({topic, rating, language});
   const [path, pushLocation] = useLocation();
   const extRef = useRef();
   const { show } = useNearScreen({once: false, extRef: loading ? null : extRef})

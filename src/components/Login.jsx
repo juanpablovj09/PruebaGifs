@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "@styles/components/Login.scss";
 import { Container, Card, Col, Row, Form, Button, Alert } from "react-bootstrap";
 import { useLocation } from "wouter";
@@ -12,6 +12,10 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { loginGoogle, login, register, currentUser } = useAuth();
+
+  useEffect(() => {
+    currentUser && pushLocation('/')
+  }, [])
 
   const handleSubmit = async(e) => {
     e.preventDefault()
@@ -46,9 +50,12 @@ function Login() {
     setError('')
   }
 
-  const handleLoginGoogle = () => {
-    if(currentUser) return setError('Another count is already in use')
-    loginGoogle()
+  const handleLoginGoogle = async () => {
+    try {
+      await loginGoogle()
+    } catch (error) {
+      console.log(error);
+    }
   }
   
 

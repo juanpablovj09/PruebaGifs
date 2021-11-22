@@ -4,17 +4,17 @@ import Context from '../context/AppContext'
 
 const STARTED_PAGE = 0;
 
-const useGifs = ({topic} = {topic: localStorage.getItem('lastTopic')}) => {
+const useGifs = ({topic, rating, language} = {topic: localStorage.getItem('lastTopic')}) => {
   // const [gifs, setGifs] = useState([]);
   const [loading, setLoading] = useState(false);
   const {gifs, setGifs} = useContext(Context)
   const [page, setPage] = useState(STARTED_PAGE);
-
+  
   const key = topic || localStorage.getItem('lastTopic') ||'ibai';
 
   useEffect(() => {
     setLoading(true);
-    getGifs({topic: key}).then(gifs => {
+    getGifs({topic: key, rating, language}).then(gifs => {
       // localStorage.setItem('data', JSON.stringify(gifs));
       // setGifs(JSON.parse(localStorage.getItem('data')))
       setGifs(gifs)
@@ -30,7 +30,7 @@ const useGifs = ({topic} = {topic: localStorage.getItem('lastTopic')}) => {
     //   localStorage.setItem('lastTopic', topic)
     // }
 
-  }, [topic, key, setGifs])
+  }, [topic, key, setGifs, rating, language])
 
   useEffect(() => {
     if(page === STARTED_PAGE) return

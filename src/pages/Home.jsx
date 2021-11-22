@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import useGifs from "../hooks/useGifs";
 import ListGifs from "../containers/ListGifs";
 import "@styles/pages/Home.scss";
-import SearchGif from "@components/SearchGif";
+import SearchGif from "@components/SearchGif/SearchGif";
 import { Helmet } from "react-helmet";
 import {useAuth} from '../context/AuthContext'
 import ButtonFavs from "../components/ButtonFavs";

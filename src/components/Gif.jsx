@@ -45,8 +45,15 @@ const Gif = (props) => {
             </div>
           </Link>
           <div className='Gif-buttons'>
-            <p onClick={handleClickLike} className='Gif-buttons__like'>Like</p>
-            <p onClick={handleClickDislike} className='Gif-buttons__dislike'>Dislike</p>
+            {
+              favs.filter(fav => fav.id === id).length > 0 ? 
+                <p onClick={handleClickDislike} className='Gif-buttons__dislike'>Dislike</p>
+                :
+                <>
+                  <p onClick={handleClickLike} className='Gif-buttons__like'>Like</p>
+                </>
+            }
+            
           </div>
         </div>
         {!!toggleModal && (

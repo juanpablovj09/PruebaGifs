@@ -20,7 +20,7 @@ const App = () => {
             <Layout>
               <Switch>
                 <Route path='/' component={Home}/>
-                <Route path='/search/:topic' component={SearchResult} />
+                <Route path='/search/:topic/:rating?/:language?' component={SearchResult} />
                 <Route path='/detail/:id' component={Detail}/>
                 <Route path='/login' component={LoginRegister} />
                 <Route path='/favs' component={Favs} />

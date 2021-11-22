@@ -48,16 +48,14 @@
     color: #fff;
     cursor: pointer;
     &__like{
-      width: 50%;
+      width: 100%;
       padding-top: 2px;
       background-color: c.$turquesoide;
-      border-radius: 0 0 0 5px;
     }
     &__dislike{
-      width: 50%;
+      width: 100%;
       padding-top: 2px;
       background-color: #555;
-      border-radius: 0 0 5px 0;
     }
   }
 }

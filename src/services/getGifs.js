@@ -1,5 +1,5 @@
-export const getGifs = async({topic = 'wanda', limit = 10, page = 0} = {}) => {
-  const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=hxXdAkqFqzINc3cvXIufm2wdB14B6lOW&q=${topic}&limit=${limit}&offset=${page*limit}&rating=g&lang=en`
+export const getGifs = async({topic = 'wanda', limit = 10, page = 0, rating = 'g', language = 'en'} = {}) => {
+  const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=hxXdAkqFqzINc3cvXIufm2wdB14B6lOW&q=${topic}&limit=${limit}&offset=${page*limit}&rating=${rating}&lang=${language}`
   
   const response = await fetch(API_URL);
   const data = await response.json();

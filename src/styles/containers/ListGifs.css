@@ -1,0 +1,45 @@
+:root {
+  --results-columns: 2;
+}
+
+.ListGifs {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.ListGifs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0 80px 0;
+}
+
+.ListGifs-grid {
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-rows: masonry;
+      grid-template-rows: masonry;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 30px;
+  margin-top: 30px;
+}
+
+.ListGifs-spinner {
+  margin-top: 30px;
+}
+
+.ListGifs h3 {
+  margin-top: 30px;
+}
+/*# sourceMappingURL=ListGifs.css.map */

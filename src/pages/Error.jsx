@@ -1,11 +1,21 @@
 import React from 'react'
+import Error from '../containers/Error'
+import { css, jsx } from '@emotion/react'
 
-const Error = () => {
+const ErrorPageStyle = css`
+  width: 100%;
+  height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const ErrorPage = () => {
   return (
-    <div>
-      No existe la pagina perro
+    <div css={ErrorPageStyle}>
+      <Error />
     </div>
   )
 }
 
-export default Error
+export default ErrorPage
